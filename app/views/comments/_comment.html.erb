@@ -1,0 +1,9 @@
+<p><strong><em><%= comment.user.email %></em></strong>: <%= comment.body %>&nbsp <span class= 'creation-time' ><%= comment.formatted_creation_time%></span>
+
+<% if user_signed_in? && current_user == comment.user %>
+
+<%= link_to "Destroy Comment", destroy_comment_path(comment.article, comment), data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure?"
+} %>
+<% end %></p>

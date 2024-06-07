@@ -1,0 +1,83 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/* navbar styling */
+.navbar {
+    background-color: lightslategray;
+    padding: 30px;
+  }
+  
+  .navbar .navbar-brand {
+    display: inline-block;
+  }
+  
+  .navbar-menu {
+    float: right;
+  }
+  
+  .navbar-menu a {
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  
+  .navbar-menu a:hover {
+    text-decoration: underline;
+  }
+
+/* articles index page styling */  
+  .index-page {
+  text-align: center;
+  }
+
+.index-page h1 {
+  color: black;
+}
+
+.index-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.index-page li {
+  margin-bottom: 10px;
+}
+
+/* styling of buttons created with helpers */
+
+.button-group .btn {
+  font-size: 14px; 
+  padding: 5px 10px; 
+}
+
+.show-page {
+ text-align: center;
+}
+
+.show-page img{
+  width: 300px; 
+  height: auto;
+}
+
+/* creation concern styling */
+
+.creation-time{
+  font-size: smaller;
+  font-style: italic;
+}
+
+.creation-user{
+  font-size: smaller;
+  font-style: italic;
+}

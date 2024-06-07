@@ -1,0 +1,9 @@
+
+<%= form_with model: [@article,@article.comments.build] do |form|%>
+    <p>
+    <%=form.text_field :body%>
+    </p>
+    <p>
+    <%= form.submit 'Post Comment', class: 'btn btn-primary' %>
+    </p>
+    <%end%>

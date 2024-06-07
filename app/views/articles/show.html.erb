@@ -1,0 +1,29 @@
+<section class = "show-page" >
+<p class = 'creation-user' >Created by: <%= @article.user.email %></p>
+<p class = 'creation-time' >Created at: <%= @article.formatted_creation_time %></p>
+<h3>Title: <%= @article.title %>
+<span class="button-group">
+    <%= create_edit_btn(@article) %>
+    <%= create_destroy_btn(@article) %>
+  </span>
+</h3>
+<div class = "img">
+<% if @article.image.attached? %>
+  <%= image_tag @article.image %>
+<% end %>
+</div>
+<p><strong>Body: </strong><%= @article.body %></p>
+
+<%= link_to "Back to Articles", articles_path %>
+
+<p><strong>Comment Section</strong></p>
+
+<% if @article.comments.any? %>
+  <%= render @article.comments %>
+<% else %>
+  <p>No comments yet.</p>
+<% end %>
+
+<p>Add a Comment</p>
+<%= render 'comments/form' %>
+</section>
